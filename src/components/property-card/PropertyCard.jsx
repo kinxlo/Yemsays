@@ -17,7 +17,11 @@ import LinkButton from '../buttons/link-button/LinkButton'
 const PropertyCard = () => {
   return (
     <Card maxW={`529px`} borderRadius={`30px`}>
-      <CardBody display={`flex`} gap={5}>
+      <CardBody
+        display={`flex`}
+        flexDir={{ base: `column`, md: `row` }}
+        gap={5}
+      >
         <Box flex={1}>
           <Image
             height={`100%`}

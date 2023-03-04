@@ -15,27 +15,35 @@ const Home = () => {
     <>
       {/* hero section */}
       <Box
+        className='page_alignment'
         bgImage={`https://res.cloudinary.com/kingsleysolomon/image/upload/v1677665416/project-yemsays/unsplash_JQUrgUn_pr4_maw4p0.png`}
         backgroundRepeat={`no-repeat`}
-        bgSize={`100%`}
+        bgSize={`cover`}
         bgPosition={`center`}
         height={`706`}
       >
         <Container>
-          <Box mt={32}>
-            <Heading fontSize={`7xl`} fontWeight={`bold`}>
+          <Box mt={32} width={`fit-content`}>
+            <Heading fontSize={{ base: `5xl`, md: `7xl` }} fontWeight={`bold`}>
               {hero.title[0]}
             </Heading>
             <Box display={`flex`} gap={5}>
-              <Heading fontSize={`7xl`} fontWeight={`bold`}>
+              <Heading
+                fontSize={{ base: `5xl`, md: `7xl` }}
+                fontWeight={`bold`}
+              >
                 {hero.title[1]}
               </Heading>
-              <Heading fontSize={`7xl`} fontWeight={`bold`} color={`primary`}>
+              <Heading
+                fontSize={{ base: `5xl`, md: `7xl` }}
+                fontWeight={`bold`}
+                color={`primary`}
+              >
                 {hero.title[2]}
               </Heading>
             </Box>
           </Box>
-          <Text width={`50%`}>{hero.subTitle}</Text>
+          <Text width={{ md: `50%` }}>{hero.subTitle}</Text>
           <Box display={`flex`} alignItems={`center`} gap={4} mt={22}>
             <LinkButton width={167} text={`View Properties`} height={`40px`} />
             <Box bg={`white`} borderRadius={`100%`} padding={1}>
@@ -45,13 +53,21 @@ const Home = () => {
         </Container>
       </Box>
       {/* section two */}
-      <Box bgColor={`black`} color={`white`}>
+      <Box className='page_alignment' bgColor={`black`} color={`white`}>
         <Container>
-          <Heading fontSize={`5xl`} textAlign={`center`} marginBottom={10}>
+          <Heading
+            fontSize={{ base: `3xl`, md: `5xl` }}
+            textAlign={`center`}
+            marginBottom={10}
+          >
             {sectionTwo.title}
           </Heading>
           {/* card list */}
-          <Box display={`flex`} gap={16}>
+          <Box
+            display={`flex`}
+            flexDir={{ base: `column`, md: `row` }}
+            gap={16}
+          >
             <Box textAlign={`center`} display={`flex`} flexDir={`column`}>
               <Box boxSize={`64px`} margin={`auto`} marginBottom={5}>
                 <img src={sectionTwo.cards[0].img} alt='icon' />
@@ -84,17 +100,28 @@ const Home = () => {
             </Box>
           </Box>
           {/* section two B */}
-          <Box display={`flex`} marginTop={44} gap={20}>
+          <Box
+            display={`flex`}
+            flexDir={{ base: `column`, md: `row` }}
+            marginTop={44}
+            gap={20}
+          >
             {/* article Picture */}
             <Box flex={1}>
-              <Box width={444}>
+              <Box maxW={444}>
                 <img
+                  className='cc-img-fluid'
                   src='https://res.cloudinary.com/kingsleysolomon/image/upload/v1677762969/project-yemsays/unsplash_o_9YmCY0bag_ipyuwz.png'
                   alt='img1'
                 />
               </Box>
-              <Box transform={`translate(12rem, -12rem)`} width={341}>
+              <Box
+                transform={`translate(12rem, -12rem)`}
+                maxW={341}
+                display={{ base: `none`, md: `block` }}
+              >
                 <img
+                  className='cc-img-fluid'
                   src='https://res.cloudinary.com/kingsleysolomon/image/upload/v1677762980/project-yemsays/unsplash_UV81E0oXXWQ_tbozsp.png'
                   alt='img2'
                 />
@@ -124,9 +151,10 @@ const Home = () => {
           </Box>
         </Container>
         {/* the banner component */}
-        <Banner />
       </Box>
+      <Banner />
       <Box
+        className='page_alignment'
         bgColor={`black`}
         color={`white`}
         bgImage={`https://res.cloudinary.com/kingsleysolomon/image/upload/v1677823600/project-yemsays/Section_5_rhsutv.png`}
@@ -135,13 +163,15 @@ const Home = () => {
       >
         <Container paddingBlock={0}>
           <Box textAlign={`center`} pt={115} mb={14}>
-            <Heading fontSize={`5xl`}>{sectionThree.title}</Heading>
+            <Heading fontSize={{ base: `3xl`, md: `5xl` }}>
+              {sectionThree.title}
+            </Heading>
             <Text color={`GrayText`} fontWeight={`bold`}>
               {sectionThree.subTitle}
             </Text>
           </Box>
           <Box>
-            <SimpleGrid columns={2} gap={`32px`}>
+            <SimpleGrid columns={{ base: 1, md: 2 }} gap={`32px`}>
               <PropertyCard />
               <PropertyCard />
               <PropertyCard />
@@ -154,12 +184,16 @@ const Home = () => {
             <Heading color={`primary`} fontSize={`xl`}>
               {Testimonials.title}
             </Heading>
-            <Text fontSize={`5xl`} color={`textLight`} fontWeight={`bold`}>
+            <Text
+              fontSize={{ base: `3xl`, md: `5xl` }}
+              color={`textLight`}
+              fontWeight={`bold`}
+            >
               {Testimonials.subTitle}
             </Text>
           </Box>
           <Box>
-            <SimpleGrid columns={2} gap={`32px`}>
+            <SimpleGrid columns={{ base: 1, md: 2 }} gap={`32px`}>
               <TestimonialCard />
               <TestimonialCard />
             </SimpleGrid>
