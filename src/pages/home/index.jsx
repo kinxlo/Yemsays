@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
 import LinkButton from '../../components/buttons/link-button/LinkButton'
 import Container from '../../layout/Container'
@@ -109,7 +109,7 @@ const Home = () => {
             {/* article Picture */}
             <Box flex={1}>
               <Box maxW={444}>
-                <img
+                <Image
                   className='cc-img-fluid'
                   src='https://res.cloudinary.com/kingsleysolomon/image/upload/v1677762969/project-yemsays/unsplash_o_9YmCY0bag_ipyuwz.png'
                   alt='img1'
@@ -118,9 +118,9 @@ const Home = () => {
               <Box
                 transform={`translate(12rem, -12rem)`}
                 maxW={341}
-                display={{ base: `none`, md: `block` }}
+                display={{ base: `none`, xl: `block` }}
               >
-                <img
+                <Image
                   className='cc-img-fluid'
                   src='https://res.cloudinary.com/kingsleysolomon/image/upload/v1677762980/project-yemsays/unsplash_UV81E0oXXWQ_tbozsp.png'
                   alt='img2'
@@ -128,7 +128,7 @@ const Home = () => {
               </Box>
             </Box>
             {/* article text */}
-            <Box flex={1} marginTop={24}>
+            <Box flex={1} marginTop={{ xl: 24 }}>
               <Heading fontSize={`lg`} color={`primary`} mb={1.5}>
                 About Us
               </Heading>
@@ -171,7 +171,11 @@ const Home = () => {
             </Text>
           </Box>
           <Box>
-            <SimpleGrid columns={{ base: 1, md: 2 }} gap={`32px`}>
+            <SimpleGrid
+              columns={{ base: 1, md: 2 }}
+              gap={`32px`}
+              justifyItems={`center`}
+            >
               <PropertyCard />
               <PropertyCard />
               <PropertyCard />
