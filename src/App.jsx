@@ -1,10 +1,17 @@
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import React from 'react'
+import { HomePage } from './pages'
+import DefaultLayout from './layout/DefaultLayout'
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Yemsays!</h1>
-    </div>
+    <BrowserRouter>
+      <DefaultLayout>
+        <Routes>
+          <Route exact path='/' element={<HomePage />} />
+        </Routes>
+      </DefaultLayout>
+    </BrowserRouter>
   )
 }
 
