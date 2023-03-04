@@ -12,10 +12,11 @@ const QuestionBanner = () => {
   return (
     <Box
       display={`flex`}
+      flexDir={{ base: `column`, md: `row` }}
       bgColor={`primary`}
       //   h={`198px`}
       borderRadius={`15px`}
-      p={`81px`}
+      p={{ base: `30px`, md: `81px` }}
     >
       <Box flex={1}>
         <Heading fontSize={`3xl`}>Do you have any questions?</Heading>
@@ -24,11 +25,14 @@ const QuestionBanner = () => {
       <Box flex={1}>
         <FormControl
           display={`flex`}
+          flexDir={{ base: `column`, md: `row` }}
           alignItems={`center`}
-          height={`66px`}
+          // height={`66px`}
           bgColor={`white`}
-          borderRadius={`xl`}
+          borderRadius={`lg`}
           px={3}
+          py={3}
+          gap={2}
         >
           <Input
             borderRadius={0}
@@ -37,7 +41,7 @@ const QuestionBanner = () => {
             placeholder='Enter email address'
             color={`grey`}
           />
-          <Button bgColor={`primary`} width={`135px`}>
+          <Button bgColor={`primary`} w={{ base: `100%`, md: `153px` }}>
             Continue
           </Button>
         </FormControl>

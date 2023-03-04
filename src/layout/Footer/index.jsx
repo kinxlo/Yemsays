@@ -21,23 +21,31 @@ import {
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <Box bgColor={`black`} className='page_alignment'>
       <Container noPaddingBlock={'0'}>
         <Box color={`white`}>
-          <Grid templateColumns='repeat(5, 1fr)' gap={6}>
+          <Grid
+            textAlign={{ base: `center`, md: `left` }}
+            templateColumns={{ base: `repeat(1, 1fr)`, md: `repeat(5, 1fr)` }}
+            gap={6}
+          >
             <GridItem colSpan={2}>
-              <Box h={`3rem`}>
+              <Box
+                h={`3rem`}
+                m={{ base: `auto`, md: `initial` }}
+                w={`fit-content`}
+              >
                 <Image
                   src={`https://res.cloudinary.com/kingsleysolomon/image/upload/v1677576945/project-yemsays/Group_86_btjv9i.png`}
                 />
               </Box>
-              <Text color={`textGrey`} width={`351px`}>
+              <Text color={`textGrey`} maxW={`351px`}>
                 Lörem ipsum birade fanas. Tridonar myvis, seng om äniskort.
                 Lörem ipsum birade fanas. Tridonarse fanas. Tridonar jmyvis,
                 seng om äniskort.
               </Text>
             </GridItem>
-            <GridItem>
+            <GridItem colSpan={{ base: 2, md: 1 }}>
               <Box>
                 <Box h={`3rem`}>
                   <Text fontWeight={`bold`}>About</Text>
@@ -74,7 +82,7 @@ const Footer = () => {
                 </List>
               </Box>
             </GridItem>
-            <GridItem>
+            <GridItem colSpan={{ base: 2, md: 1 }}>
               <Box>
                 <Box h={`3rem`}>
                   <Text fontWeight={`bold`}>Properties</Text>
@@ -111,7 +119,7 @@ const Footer = () => {
                 </List>
               </Box>
             </GridItem>
-            <GridItem>
+            <GridItem colSpan={{ base: 2, md: 1 }}>
               <Box>
                 <Box h={`3rem`}>
                   <Text fontWeight={`bold`}>Contact</Text>
@@ -150,7 +158,11 @@ const Footer = () => {
             </GridItem>
           </Grid>
           <Box>
-            <Box display={`flex`} gap={3}>
+            <Box
+              display={`flex`}
+              justifyContent={{ base: `center`, md: `initial` }}
+              gap={3}
+            >
               <Flex
                 p={2}
                 borderRadius={`100%`}
@@ -183,7 +195,7 @@ const Footer = () => {
           </Box>
         </Box>
       </Container>
-    </footer>
+    </Box>
   )
 }
 
