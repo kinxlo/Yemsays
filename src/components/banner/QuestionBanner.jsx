@@ -14,12 +14,14 @@ const QuestionBanner = () => {
       display={`flex`}
       flexDir={{ base: `column`, md: `row` }}
       bgColor={`primary`}
-      //   h={`198px`}
       borderRadius={`15px`}
-      p={{ base: `30px`, md: `81px` }}
+      gap={5}
+      p={{ base: `30px`, md: `50px 30px`, xl: `81px` }}
     >
       <Box flex={1}>
-        <Heading fontSize={`3xl`}>Do you have any questions?</Heading>
+        <Heading fontSize={{ base: `2xl`, sm: `xl`, xl: `3xl` }}>
+          Do you have any questions?
+        </Heading>
         <Text>Enter your email address and get started</Text>
       </Box>
       <Box flex={1}>

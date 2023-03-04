@@ -19,7 +19,7 @@ const PropertyCard = () => {
     <Card maxW={`529px`} borderRadius={`30px`}>
       <CardBody
         display={`flex`}
-        flexDir={{ base: `column`, md: `row` }}
+        flexDir={{ base: `column`, xl: `row` }}
         gap={5}
       >
         <Box flex={1}>
