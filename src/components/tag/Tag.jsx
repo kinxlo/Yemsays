@@ -2,7 +2,7 @@ import { Box, Card, Text } from '@chakra-ui/react'
 import React from 'react'
 
 // eslint-disable-next-line react/prop-types
-const Tag = ({ bgColor, color, text, children }) => {
+const Tag = ({ bgColor, color, text, children, fs }) => {
   return (
     <Card
       bgColor={bgColor}
@@ -17,7 +17,7 @@ const Tag = ({ bgColor, color, text, children }) => {
       gap={2}
     >
       <Box width={`fit-content`}>{children}</Box>
-      <Text width={`fit-content`} fontSize={`sm`}>
+      <Text width={`fit-content`} fontSize={fs || `sm`}>
         {text}
       </Text>
     </Card>
