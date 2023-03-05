@@ -97,21 +97,21 @@ const NavBar = ({ children, transparentBg }) => {
                 </Link>
                 <Link
                   className={styles.navLink}
-                  to='/howitworks'
+                  to='/about-us'
                   onClick={handleCloseNavBar}
                 >
                   About Us
                 </Link>
                 <Link
                   className={styles.navLink}
-                  to='/howitworks'
+                  to='/properties'
                   onClick={handleCloseNavBar}
                 >
                   Properties
                 </Link>
                 <Link
                   className={styles.navLink}
-                  to='/howitworks'
+                  to='/contact'
                   onClick={handleCloseNavBar}
                 >
                   Contact

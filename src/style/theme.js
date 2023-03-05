@@ -50,12 +50,13 @@ const theme = extendTheme({
   },
   colors: {
     primary: `#f78214`,
+    bgBlack: `#121212`,
     black: `#070707`,
     white: `#ffffff`,
     grey: `#1f1f1f`,
     // text
     textLight: `#fceee2`,
-    textDark: `#070707`,
+    textDark: `#121212`,
     textGrey: `#8d8d8d`,
     //accents
     accentBlue: `#caf2fe`,
