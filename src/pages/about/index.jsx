@@ -85,9 +85,15 @@ const index = () => {
         </Container>
       </Box>
       {/* section three */}
-      <Box bgColor={`black`} className='page_alignment'>
+      <Box bgColor={`black`} color={`textLight`} className='page_alignment'>
         <Container>
-          <Heading>{sectionThree.title}</Heading>
+          <Heading
+            textAlign={`center`}
+            fontSize={{ base: `3xl`, md: `5xl` }}
+            mb={10}
+          >
+            {sectionThree.title}
+          </Heading>
           <Box>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={5}>
               <ProfileCard />

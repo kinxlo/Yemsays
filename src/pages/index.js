@@ -1,3 +1,5 @@
 export { default as HomePage } from './home'
 export { default as AboutPage } from './about'
+export { default as ContactPage } from './contact'
 export { default as PropertiesPage } from './properties'
+export { default as PropertiesDetailsPage } from './properties/PropertiesDetailsPage'
