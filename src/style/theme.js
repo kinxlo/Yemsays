@@ -55,7 +55,7 @@ const theme = extendTheme({
     grey: `#1f1f1f`,
     // text
     textLight: `#fceee2`,
-    textDark: `#070707`,
+    textDark: `#121212`,
     textGrey: `#8d8d8d`,
     //accents
     accentBlue: `#caf2fe`,
