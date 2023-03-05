@@ -50,6 +50,7 @@ const theme = extendTheme({
   },
   colors: {
     primary: `#f78214`,
+    bgBlack: `#121212`,
     black: `#070707`,
     white: `#ffffff`,
     grey: `#1f1f1f`,

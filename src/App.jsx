@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import React from 'react'
-import { AboutPage, HomePage } from './pages'
+import { AboutPage, HomePage, PropertiesPage } from './pages'
 import DefaultLayout from './layout/DefaultLayout'
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<HomePage />} />
           <Route exact path='/about-us' element={<AboutPage />} />
+          <Route exact path='/properties' element={<PropertiesPage />} />
         </Routes>
       </DefaultLayout>
     </BrowserRouter>
