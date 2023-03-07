@@ -8,17 +8,17 @@ export const HOME_CONTENT = {
     title: `Why Choose Us`,
     cards: [
       {
-        img: `https://res.cloudinary.com/kingsleysolomon/image/upload/v1677742336/project-yemsays/Vector_ivqz6y.png`,
+        img: `https://res.cloudinary.com/kingsleysolomon/image/upload/v1678111173/project-yemsays/Group_202_mkksfk.png`,
         title: `Tax Advantage`,
         desc: `Lörem ipsum riteck prekin att ysade. Makrosm rud visorade. `,
       },
       {
-        img: `https://res.cloudinary.com/kingsleysolomon/image/upload/v1677742337/project-yemsays/Vector-1_mbbezi.png`,
+        img: `https://res.cloudinary.com/kingsleysolomon/image/upload/v1678111178/project-yemsays/Group_203_wq9lcc.png`,
         title: `Property Insurance`,
         desc: `Lörem ipsum riteck prekin att ysade. Makrosm rud visorade. `,
       },
       {
-        img: `https://res.cloudinary.com/kingsleysolomon/image/upload/v1677742336/project-yemsays/Vector-2_p8cy5t.png`,
+        img: `https://res.cloudinary.com/kingsleysolomon/image/upload/v1678111180/project-yemsays/Group_204_fq4ztf.png`,
         title: `Lowest Commission`,
         desc: `Lörem ipsum riteck prekin att ysade. Makrosm rud visorade. `,
       },

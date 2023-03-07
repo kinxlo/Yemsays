@@ -120,7 +120,7 @@ const NavBar = ({ children, transparentBg }) => {
                   text={`Book now`}
                   width={`113px`}
                   height={`40px`}
-                  to={`/`}
+                  to={`/book-now`}
                 />
                 {children}
               </div>
