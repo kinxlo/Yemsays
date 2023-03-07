@@ -1,128 +1,140 @@
 import {
   Box,
-  Container,
-  FormControl,
-  GridItem,
+  Flex,
   Heading,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  SimpleGrid,
+  List,
   Text,
+  Center,
+  FormControl,
+  Input,
   Textarea,
+  Button,
+  Image,
 } from '@chakra-ui/react'
 import React from 'react'
-import { FaEnvelope, FaPhoneAlt, FaUserAlt } from 'react-icons/fa'
-import {
-  MdDateRange,
-  MdLocationOn,
-  MdOutlineAccessTimeFilled,
-} from 'react-icons/md'
-// import Container from '../../layout/Container'
+import { AiFillPhone } from 'react-icons/ai'
+import { FaMapMarkerAlt } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
+import Container from '../../layout/Container'
+import { CONTACT_CONTENT } from './content'
 
 const index = () => {
+  const { sectionOne, contacts } = CONTACT_CONTENT
   return (
     <>
-      {/* hero section */}
-      <Box
-        className='page_alignment'
-        bgColor={`black`}
-        color={`white`}
-        textAlign={`center`}
-        py={10}
-      >
-        <Container maxW={`1200px`}>
-          <Heading fontSize={{ base: `4xl`, md: `6xl` }} fontWeight={`bold`}>
-            Schedule an Inspection With Us
-          </Heading>
-          <Text
-            maxW={`644px`}
-            margin={`auto`}
-            fontSize={`xl`}
-            color={`textGrey`}
-          >
-            Please fill in this form to book an inspection with us.
-          </Text>
-        </Container>
-      </Box>
-      {/* form */}
-      <Box bgColor={`black`} color={`white`}>
-        <Container maxW={`768px`}>
-          <FormControl>
-            <SimpleGrid columns={2} gap={10}>
-              <GridItem colSpan={{ base: 2, lg: 1 }}>
-                <InputGroup size={`lg`}>
-                  <InputLeftElement pointerEvents='none'>
-                    <FaUserAlt color='orange' size={`1.5rem`} />
-                  </InputLeftElement>
-                  <Input type='text' placeholder='First Name' />
-                </InputGroup>
-              </GridItem>
-              {/* input 2 */}
-              <GridItem colSpan={{ base: 2, lg: 1 }}>
-                <InputGroup size={`lg`}>
-                  <InputLeftElement pointerEvents='none'>
-                    <FaUserAlt color='orange' size={`1.5rem`} />
-                  </InputLeftElement>
-                  <Input type='text' placeholder='Last Name' />
-                </InputGroup>
-              </GridItem>
-              {/* input 3 */}
-              <GridItem colSpan={2}>
-                <InputGroup size={`lg`}>
-                  <InputLeftElement pointerEvents='none'>
-                    <FaEnvelope color='orange' size={`1.5rem`} />
-                  </InputLeftElement>
-                  <Input type='email' placeholder='Email Address' />
-                </InputGroup>
-              </GridItem>
-              {/* input 4 */}
-              <GridItem colSpan={2}>
-                <InputGroup size={`lg`}>
-                  <InputLeftElement pointerEvents='none'>
-                    <FaPhoneAlt color='orange' size={`1.5rem`} />
-                  </InputLeftElement>
-                  <Input type='tel' placeholder='Phone number' />
-                </InputGroup>
-              </GridItem>
-              {/* input 5 */}
-              <GridItem colSpan={2}>
-                <InputGroup size={`lg`}>
-                  <InputLeftElement pointerEvents='none'>
-                    <MdLocationOn color='orange' size={`1.5rem`} />
-                  </InputLeftElement>
-                  <Input type='text' placeholder='Location' />
-                </InputGroup>
-              </GridItem>
-              {/* input 6 */}
-              <GridItem colSpan={{ base: 2, lg: 1 }}>
-                <InputGroup size={`lg`}>
-                  <InputLeftElement pointerEvents='none'>
-                    <MdDateRange color='orange' size={`1.5rem`} />
-                  </InputLeftElement>
-                  <Input type='date' placeholder='Inspection Date' />
-                </InputGroup>
-              </GridItem>
-              {/* input 7 */}
-              <GridItem colSpan={{ base: 2, lg: 1 }}>
-                <InputGroup size={`lg`}>
-                  <InputLeftElement pointerEvents='none'>
-                    <MdOutlineAccessTimeFilled color='orange' size={`1.5rem`} />
-                  </InputLeftElement>
-                  <Input type='time' placeholder='Inspection Time' />
-                </InputGroup>
-              </GridItem>
-              {/* input 8 */}
-              <GridItem colSpan={2}>
-                <InputGroup size={`lg`}>
-                  {/* <InputLeftElement pointerEvents='none'>
-                    <AiOutlineUser color='orange' size={`1.5rem`} />
-                  </InputLeftElement> */}
-                  <Textarea h={`10rem`} placeholder='Additional Message...' />
-                </InputGroup>
-              </GridItem>
-            </SimpleGrid>
-          </FormControl>
+      <Box className='page_alignment' bgColor={`black`} color={`white`}>
+        <Container>
+          <Flex gap={10} mt={10} flexDir={{ base: `column`, lg: `row` }}>
+            <Box flex={1}>
+              <Box>
+                <Heading fontSize={`2xl`} color={`primary`}>
+                  {sectionOne.title}
+                </Heading>
+                <Heading fontSize={`4xl`}>{sectionOne.subTitle}</Heading>
+              </Box>
+              <Box my={10}>
+                <Text color={`textGrey`} fontSize={`xl`} lineHeight={`30px`}>
+                  {sectionOne.desc}
+                </Text>
+              </Box>
+              <List>
+                <Flex alignItems={`center`} gap={3}>
+                  <Center
+                    boxSize={`60px`}
+                    borderRadius={5}
+                    bgColor={`primary`}
+                    color={`white`}
+                  >
+                    <FaMapMarkerAlt size={`1.5rem`} />
+                  </Center>
+                  <Box>
+                    <Text fontSize={`xl`}>{contacts[0].title}</Text>
+                    <Text>{contacts[0].subTitle}</Text>
+                  </Box>
+                </Flex>
+                <Flex alignItems={`center`} gap={3} my={`29px`}>
+                  <Center
+                    boxSize={`60px`}
+                    borderRadius={5}
+                    bgColor={`primary`}
+                    color={`white`}
+                  >
+                    <AiFillPhone size={`1.5rem`} />
+                  </Center>
+                  <Box>
+                    <Text fontSize={`xl`}>{contacts[1].title}</Text>
+                    <Text>{contacts[1].subTitle}</Text>
+                  </Box>
+                </Flex>
+                <Flex alignItems={`center`} gap={3}>
+                  <Center
+                    boxSize={`60px`}
+                    borderRadius={5}
+                    bgColor={`primary`}
+                    color={`white`}
+                  >
+                    <MdEmail size={`1.5rem`} />
+                  </Center>
+                  <Box>
+                    <Text fontSize={`xl`}>{contacts[2].title}</Text>
+                    <Text>{contacts[2].subTitle}</Text>
+                  </Box>
+                </Flex>
+              </List>
+            </Box>
+            <Flex pos={`relative`} flex={1} justifyContent={`end`}>
+              <Box
+                display={{ base: `none`, lg: `initial` }}
+                pos={`absolute`}
+                bottom={-12}
+                left={-5}
+                boxSize={`123px`}
+              >
+                <Image
+                  className='cc-img-fluid'
+                  src={`https://res.cloudinary.com/kingsleysolomon/image/upload/v1678178009/project-yemsays/image_3_ukipxm.png`}
+                />
+              </Box>
+              <Box
+                display={{ base: `none`, lg: `initial` }}
+                pos={`absolute`}
+                top={-70}
+                right={-50}
+              >
+                <Image
+                  className='cc-img-fluid'
+                  src={`https://res.cloudinary.com/kingsleysolomon/image/upload/v1678178332/project-yemsays/Ellipse_16_fhlu0u.png`}
+                />
+              </Box>
+              <Box
+                w={{ base: `100%`, lg: `500px` }}
+                bgColor={`white`}
+                p={10}
+                borderRadius={8}
+                zIndex={1}
+              >
+                <FormControl color={`textDark`}>
+                  <Box mb={10}>
+                    <Input size={`lg`} placeholder='Your name' />
+                  </Box>
+                  <Box mb={10}>
+                    <Input size={`lg`} placeholder='Email' />
+                  </Box>
+                  <Box mb={10}>
+                    <Input size={`lg`} placeholder='Phone number' />
+                  </Box>
+                  <Box mb={10}>
+                    <Textarea h={`10rem`} size={`lg`} placeholder='Message' />
+                  </Box>
+                  <Box>
+                    <Button w={`100%`} colorScheme={`orange`} fontWeight={300}>
+                      Submit Message
+                    </Button>
+                  </Box>
+                </FormControl>
+              </Box>
+            </Flex>
+          </Flex>
         </Container>
       </Box>
     </>

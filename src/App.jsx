@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import React from 'react'
 import {
   AboutPage,
+  Booknow,
   ContactPage,
   HomePage,
   PropertiesDetailsPage,
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<HomePage />} />
           <Route exact path='/about-us' element={<AboutPage />} />
+          <Route exact path='/book-now' element={<Booknow />} />
           <Route exact path='/contact' element={<ContactPage />} />
           <Route exact path='/properties' element={<PropertiesPage />} />
           <Route

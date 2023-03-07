@@ -8,6 +8,7 @@ import Banner from '../../components/banner/Banner'
 import PropertyCard from '../../components/property-card/PropertyCard'
 import TestimonialCard from '../../components/testimonial-card/TestimonialCard'
 import QuestionBanner from '../../components/banner/QuestionBanner'
+import SearchForm from '../../components/search-form/SearchForm'
 
 const Home = () => {
   const { hero, sectionTwo, sectionThree, Testimonials } = HOME_CONTENT
@@ -51,6 +52,12 @@ const Home = () => {
             </Box>
           </Box>
         </Container>
+        <Box
+          display={{ base: `none`, lg: `block` }}
+          transform={`translateY(3rem)`}
+        >
+          <SearchForm />
+        </Box>
       </Box>
       {/* section two */}
       <Box className='page_alignment' bgColor={`black`} color={`white`}>
@@ -58,7 +65,7 @@ const Home = () => {
           <Heading
             fontSize={{ base: `3xl`, md: `5xl` }}
             textAlign={`center`}
-            marginBottom={10}
+            my={10}
           >
             {sectionTwo.title}
           </Heading>
