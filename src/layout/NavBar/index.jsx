@@ -61,7 +61,7 @@ const NavBar = ({ children, transparentBg }) => {
 
   return (
     <nav
-      className={`${styles.navBar} ${`page_alignment`} ${
+      className={`${styles.navBar} ${`nav_alignment`} ${
         isScrolled && styles.invertNavBar
       } ${transparentBg ? styles.transparentBg : styles.defaultBg} `}
     >
