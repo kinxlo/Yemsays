@@ -22,7 +22,7 @@ const PropertyCard = () => {
         flexDir={{ base: `column`, xl: `row` }}
         gap={5}
       >
-        <Box flex={1}>
+        <Box height={{ base: `50%`, md: `100%` }} flex={1}>
           <Image
             height={`100%`}
             objectFit={`cover`}

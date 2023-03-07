@@ -2,11 +2,18 @@
 @use '../../style/scss/utils/functions' as fn;
 
 .navBar {
-  width: 100%;
+  // width: 100%;
   position: sticky;
   top: 0;
   z-index: 2;
   transition: all 300ms ease-in;
+  padding: 0 fn.rem(16);
+  @media screen and (min-width: 768px) {
+    padding: 0 5rem;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 2rem;
+  }
 
   // SCREENS 825px and LARGER
   @media only screen and (min-width: 825px) {
@@ -30,7 +37,7 @@
   }
 
   .navContent {
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +60,7 @@
       @media only screen and (min-width: 825px) {
         width: unset;
         height: unset;
-        // padding-block: 0;
+        padding-block: 0;
       }
 
       .navLogo {
