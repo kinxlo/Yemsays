@@ -8,6 +8,7 @@ import LinkButton from '../../components/buttons/link-button/LinkButton'
 import ProfileCard from '../../components/profile-card/ProfileCard'
 import TestimonialCard from '../../components/testimonial-card/TestimonialCard'
 import Container from '../../layout/Container'
+import DefaultLayout from '../../layout/DefaultLayout'
 import { HOME_CONTENT } from '../home/content'
 import { ABOUT_CONTENT } from './content'
 
@@ -15,7 +16,7 @@ const index = () => {
   const { hero, sectionTwo, sectionThree, sectionFour } = ABOUT_CONTENT
   const { Testimonials } = HOME_CONTENT
   return (
-    <>
+    <DefaultLayout>
       {/* about hero */}
       <Box
         className='page_alignment'
@@ -36,7 +37,12 @@ const index = () => {
             {hero.subTitle}
           </Text>
           <Box display={`flex`} alignItems={`center`} gap={4} mt={22}>
-            <LinkButton width={167} text={`View Properties`} height={`40px`} />
+            <LinkButton
+              to={`/properties`}
+              width={167}
+              text={`View Properties`}
+              height={`40px`}
+            />
           </Box>
         </Container>
       </Box>
@@ -130,7 +136,11 @@ const index = () => {
                 </Text>
               </Flex>
             </Box>
-            <Box flex={1}>location on map</Box>
+            <Box flex={1}>
+              <Image
+                src={`https://res.cloudinary.com/kingsleysolomon/image/upload/v1678304902/project-yemsays/Rectangle_36_1_tdndxm.png`}
+              />
+            </Box>
           </Flex>
         </Container>
       </Box>
@@ -162,7 +172,7 @@ const index = () => {
           </Box>
         </Container>
       </Box>
-    </>
+    </DefaultLayout>
   )
 }
 
