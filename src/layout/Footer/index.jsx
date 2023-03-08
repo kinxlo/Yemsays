@@ -11,10 +11,12 @@ import {
   Grid,
   GridItem,
   Image,
+  Link,
   List,
   ListItem,
   Text,
 } from '@chakra-ui/react'
+import { Link as ReactLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -32,9 +34,11 @@ const Footer = () => {
                 m={{ base: `auto`, md: `initial` }}
                 w={`fit-content`}
               >
-                <Image
-                  src={`https://res.cloudinary.com/kingsleysolomon/image/upload/v1677576945/project-yemsays/Group_86_btjv9i.png`}
-                />
+                <Link as={ReactLink} to={`/`}>
+                  <Image
+                    src={`https://res.cloudinary.com/kingsleysolomon/image/upload/v1677576945/project-yemsays/Group_86_btjv9i.png`}
+                  />
+                </Link>
               </Box>
               <Text
                 color={`textGrey`}

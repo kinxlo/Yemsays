@@ -4,14 +4,15 @@ import Banner from '../../components/banner/Banner'
 import QuestionBanner from '../../components/banner/QuestionBanner'
 import PropertyCard from '../../components/property-card/PropertyCard'
 import Container from '../../layout/Container'
+import DefaultLayout from '../../layout/DefaultLayout'
 
 const index = () => {
   return (
-    <>
+    <DefaultLayout>
       {/* hero section */}
       <Box
         className='page_alignment'
-        bgColor={`bgBlack`}
+        bgColor={`black`}
         color={`white`}
         textAlign={`center`}
         py={10}
@@ -27,7 +28,7 @@ const index = () => {
         </Container>
       </Box>
       {/* section two */}
-      <Box bgColor={`bgBlack`} color={`white`} className='page_alignment'>
+      <Box bgColor={`black`} color={`white`} className='page_alignment'>
         <Container>
           <Box textAlign={`center`} mb={10}>
             <Heading fontSize={`5xl`} color={`textLight`}>
@@ -52,10 +53,10 @@ const index = () => {
         </Container>
       </Box>
       {/* banner */}
-      <Box bgColor={`bgBlack`} py={10}>
+      <Box bgColor={`black`} py={10}>
         <Banner />
       </Box>
-      <Box bgColor={`bgBlack`} className='page_alignment'>
+      <Box bgColor={`black`} className='page_alignment'>
         <Container>
           <Box>
             <SimpleGrid columns={{ base: 1, lg: 2 }} gap={10}>
@@ -72,12 +73,12 @@ const index = () => {
         </Container>
       </Box>
       {/* question banner */}
-      <Box bgColor={`bgBlack`} color={`white`} className='page_alignment'>
+      <Box bgColor={`black`} color={`white`} className='page_alignment'>
         <Container>
           <QuestionBanner />
         </Container>
       </Box>
-    </>
+    </DefaultLayout>
   )
 }
 

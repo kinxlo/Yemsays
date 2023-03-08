@@ -22,7 +22,7 @@ const PropertyCard = () => {
         flexDir={{ base: `column`, xl: `row` }}
         gap={5}
       >
-        <Box height={{ base: `50%`, md: `100%` }} flex={1}>
+        <Box height={{ base: `20rem`, md: `100%` }} flex={{ lg: 1 }}>
           <Image
             height={`100%`}
             objectFit={`cover`}
@@ -95,7 +95,12 @@ const PropertyCard = () => {
             </SimpleGrid>
           </Box>
           <Box paddingTop={4}>
-            <LinkButton text={`View Details`} width={`128px`} height={`32px`} />
+            <LinkButton
+              to={`/properties/${1}/details`}
+              text={`View Details`}
+              width={`128px`}
+              height={`32px`}
+            />
           </Box>
         </Stack>
       </CardBody>

@@ -9,11 +9,12 @@ import PropertyCard from '../../components/property-card/PropertyCard'
 import TestimonialCard from '../../components/testimonial-card/TestimonialCard'
 import QuestionBanner from '../../components/banner/QuestionBanner'
 import SearchForm from '../../components/search-form/SearchForm'
+import DefaultLayout from '../../layout/DefaultLayout'
 
 const Home = () => {
   const { hero, sectionTwo, sectionThree, Testimonials } = HOME_CONTENT
   return (
-    <>
+    <DefaultLayout>
       {/* hero section */}
       <Box
         className='page_alignment'
@@ -46,7 +47,12 @@ const Home = () => {
           </Box>
           <Text width={{ md: `50%` }}>{hero.subTitle}</Text>
           <Box display={`flex`} alignItems={`center`} gap={4} mt={22}>
-            <LinkButton width={167} text={`View Properties`} height={`40px`} />
+            <LinkButton
+              to={`/properties`}
+              width={167}
+              text={`View Properties`}
+              height={`40px`}
+            />
             <Box bg={`white`} borderRadius={`100%`} padding={1}>
               <MdPlayArrow size={`1.5rem`} color={`orange`} />
             </Box>
@@ -150,6 +156,7 @@ const Home = () => {
                 {sectionTwo.aboutUs.desc}
               </Text>
               <LinkButton
+                to={`/properties`}
                 text={`View Properties`}
                 width={179}
                 height={`40px`}
@@ -214,7 +221,7 @@ const Home = () => {
           </Box>
         </Container>
       </Box>
-    </>
+    </DefaultLayout>
   )
 }
 

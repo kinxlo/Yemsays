@@ -18,11 +18,12 @@ import {
   MdLocationOn,
   MdOutlineAccessTimeFilled,
 } from 'react-icons/md'
+import DefaultLayout from '../../layout/DefaultLayout'
 // import Container from '../../layout/Container'
 
 const index = () => {
   return (
-    <>
+    <DefaultLayout>
       {/* hero section */}
       <Box
         className='page_alignment'
@@ -125,7 +126,7 @@ const index = () => {
           </FormControl>
         </Container>
       </Box>
-    </>
+    </DefaultLayout>
   )
 }
 

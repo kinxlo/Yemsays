@@ -16,12 +16,13 @@ import { AiFillPhone } from 'react-icons/ai'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import Container from '../../layout/Container'
+import DefaultLayout from '../../layout/DefaultLayout'
 import { CONTACT_CONTENT } from './content'
 
 const index = () => {
   const { sectionOne, contacts } = CONTACT_CONTENT
   return (
-    <>
+    <DefaultLayout>
       <Box className='page_alignment' bgColor={`black`} color={`white`}>
         <Container>
           <Flex gap={10} mt={10} flexDir={{ base: `column`, lg: `row` }}>
@@ -137,7 +138,7 @@ const index = () => {
           </Flex>
         </Container>
       </Box>
-    </>
+    </DefaultLayout>
   )
 }
 

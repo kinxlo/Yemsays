@@ -31,10 +31,11 @@ import SalesPersonCard from '../../components/saleperson-profile-card/SalesPerso
 import SimilarPropertyCard from '../../components/property-card/SimilarPropertyCard'
 import Banner from '../../components/banner/Banner'
 import QuestionBanner from '../../components/banner/QuestionBanner'
+import DefaultLayout from '../../layout/DefaultLayout'
 
 const PropertiesDetailsPage = () => {
   return (
-    <>
+    <DefaultLayout>
       <Box className='page_alignment' bgColor={`black`}>
         <Container>
           <Grid
@@ -471,7 +472,7 @@ const PropertiesDetailsPage = () => {
           <QuestionBanner />
         </Container>
       </Box>
-    </>
+    </DefaultLayout>
   )
 }
 
