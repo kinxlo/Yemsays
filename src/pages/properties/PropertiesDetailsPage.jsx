@@ -32,6 +32,7 @@ import SimilarPropertyCard from '../../components/property-card/SimilarPropertyC
 import Banner from '../../components/banner/Banner'
 import QuestionBanner from '../../components/banner/QuestionBanner'
 import DefaultLayout from '../../layout/DefaultLayout'
+import TwoColumnLayout from '../../layout/TwoColumnLayout'
 
 const PropertiesDetailsPage = () => {
   return (
@@ -80,10 +81,8 @@ const PropertiesDetailsPage = () => {
       {/* section two  with unique layer */}
       <Box className='page_alignment' bgColor={`black`}>
         <Container>
-          <Grid
-            templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(12, 1fr)' }}
-            gap={6}
-          >
+          {/* section two  with unique layer */}
+          <TwoColumnLayout>
             {/* grid one */}
             <GridItem colSpan={{ base: 1, lg: 8 }} color={`white`}>
               {/* tags */}
@@ -463,7 +462,7 @@ const PropertiesDetailsPage = () => {
                 </SimpleGrid>
               </Box>
             </GridItem>
-          </Grid>
+          </TwoColumnLayout>
         </Container>
       </Box>
       <Banner />

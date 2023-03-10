@@ -28,7 +28,7 @@ function Sidebar(props) {
     'unset'
   )
   // Chakra Color Mode
-  let sidebarBg = useColorModeValue('white', 'navy.800')
+  let sidebarBg = useColorModeValue('dashboardBG', 'navy.800')
   let sidebarMargins = '0px'
 
   // SIDEBAR
@@ -62,12 +62,11 @@ export function SidebarResponsive(props) {
     <Flex display={{ sm: 'flex', xl: 'none' }} alignItems='center'>
       <Flex ref={btnRef} w='max-content' h='max-content' onClick={onOpen}>
         <Icon
+          width={`2rem`}
+          height={`2rem`}
           as={IoMenuOutline}
-          color={`black`}
+          color={`white`}
           my='auto'
-          w='20px'
-          h='20px'
-          me='10px'
           _hover={{ cursor: 'pointer' }}
         />
       </Flex>
@@ -80,12 +79,13 @@ export function SidebarResponsive(props) {
         <DrawerOverlay />
         <DrawerContent w='285px' maxW='285px' bg={`white`}>
           <DrawerCloseButton
+            color={`white`}
             zIndex='3'
             onClose={onClose}
             _focus={{ boxShadow: 'none' }}
             _hover={{ boxShadow: 'none' }}
           />
-          <DrawerBody maxW='285px' px='0rem' pb='0'>
+          <DrawerBody bgColor={`dashboardBG`} maxW='285px' px='0rem' pb='0'>
             <Content routes={routes} />
           </DrawerBody>
         </DrawerContent>

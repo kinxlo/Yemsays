@@ -54,6 +54,7 @@ const theme = extendTheme({
     black: `#070707`,
     white: `#ffffff`,
     grey: `#1f1f1f`,
+    dashboardBG: `#181818`,
     // text
     textLight: `#fceee2`,
     textDark: `#121212`,
