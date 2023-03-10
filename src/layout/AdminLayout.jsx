@@ -5,7 +5,7 @@ import React from 'react'
 import routes from '../routes'
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../components/sidebar/Sidebar'
-// import Sidebar, { SidebarResponsive } from '../components/sidebar/Sidebar'
+import AdminNavbar from './AdminNavbar'
 
 const AdminLayout = (props) => {
   const { ...rest } = props
@@ -14,8 +14,10 @@ const AdminLayout = (props) => {
     <div>
       <>
         <Sidebar routes={routes} display='none' {...rest} />
-        {/* <SidebarResponsive routes={routes} display='none' {...rest} /> */}
+
         <Box
+          bgColor={`bgBlack`}
+          color={`white`}
           float='right'
           minHeight='100vh'
           height='100%'
@@ -29,6 +31,9 @@ const AdminLayout = (props) => {
           transitionProperty='top, bottom, width'
           transitionTimingFunction='linear, linear, ease'
         >
+          <Box bgColor={`dashboardBG`}>
+            <AdminNavbar />
+          </Box>
           <Box
             mx='auto'
             p={{ base: '20px', md: '30px' }}

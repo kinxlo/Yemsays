@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Chakra imports
-import { Flex } from '@chakra-ui/react'
+import { Center, Flex, Image } from '@chakra-ui/react'
 
 // Custom components
 // import { HorizonLogo } from 'components/icons/Icons'
@@ -11,9 +11,11 @@ export function SidebarBrand() {
   //   Chakra color mode
 
   return (
-    <Flex align='center' direction='column'>
-      YEMSAYS!
-    </Flex>
+    <Center align='center' direction='column'>
+      <Image
+        src={`https://res.cloudinary.com/kingsleysolomon/image/upload/v1677576945/project-yemsays/Group_86_btjv9i.png`}
+      />
+    </Center>
   )
 }
 

@@ -21,15 +21,18 @@ export function SidebarLinks(props) {
       return (
         <NavLink key={index} to={route.layout + route.path}>
           {route.icon ? (
-            <Flex w='100%' alignItems='center' justifyContent='center'>
-              <Box
-                color={activeRoute(route.path.toLowerCase()) ? null : null}
-                me='18px'
-              >
+            <Flex
+              color='textGrey'
+              flexDir={`column`}
+              w='100%'
+              alignItems='center'
+              justifyContent='center'
+              gap={3}
+            >
+              <Box color={activeRoute(route.path.toLowerCase()) ? null : null}>
                 {route.icon}
               </Box>
               <Text
-                me='auto'
                 color={activeRoute(route.path.toLowerCase()) ? null : null}
                 fontWeight={
                   activeRoute(route.path.toLowerCase()) ? 'bold' : 'normal'
